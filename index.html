@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGE VPN</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  text-align: center;
+}
+
+/* Top bar */
+.topbar {
+  padding: 15px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  font-size: 16px;
+}
+
+/* Title */
+h1 {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+/* Card */
+.card {
+  margin: 40px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 380px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Price */
+.price {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Button */
+.btn {
+  margin-top: 20px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 30px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+/* Toggle */
+.toggle {
+  width: 50px;
+  height: 25px;
+  background: #444;
+  border-radius: 20px;
+  margin: 10px auto;
+  position: relative;
+}
+.toggle::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #00ffcc;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 25px;
+}
+
+/* Snow */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  to { transform: translateY(100vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  AGE VPN SERVICE
+</div>
+
+<h1>AGE VPN</h1>
+
+<div class="toggle"></div>
+
+<div class="card">
+  <h2>1 Month Plan</h2>
+  <div class="price">60 THB</div>
+  <p>Fast & Secure VPN Access</p>
+
+  <a class="btn" href="/apk/agevpn.apk" download>
+    Download APK
+  </a>
+</div>
+
+<script>
+for(let i=0;i<25;i++){
+  let snow = document.createElement("div");
+  snow.className = "snowflake";
+  snow.innerHTML = "❄";
+  snow.style.left = Math.random()*100 + "vw";
+  snow.style.animationDuration = (3+Math.random()*5)+"s";
+  snow.style.fontSize = (10+Math.random()*20)+"px";
+  document.body.appendChild(snow);
+}
+</script>
+
+</body>
+</html>
